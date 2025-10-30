@@ -1,9 +1,0 @@
-{ text here  {te$st} here too
-{hello$world}
-${helloworld}
-${this is a whole {lot of something} }
-Some fun text over here
-}
-{on the end}¤
-more fun text here
-{more $ string $ interpolations}

@@ -1,6 +1,6 @@
 # GulfOfMexico - Rust Implementation
 
-## 100% spec compliant Rust implementation of Gulf Of Mexico
+### 100% spec compliant Rust implementation of [Gulf Of Mexico](https://github.com/TodePond/GulfOfMexico)
 
 This is a fully-featured interpreter for the perfect and best programming language ~~DreamBird~~ Gulf of Mexico.
 
@@ -10,7 +10,7 @@ This is literally my first time writing Rust code so please don't judge my mess 
 
 This project was written by a **real human**.
 
-**Usage**
+## Usage
 
 Compile the program with:
 ```bash
