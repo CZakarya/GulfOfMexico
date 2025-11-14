@@ -48,7 +48,8 @@ Usage: gulfofmexico [OPTIONS|INPUT]
 
 Options:
     -h, --help       Display this message
-    -v, --version    Display version information\
+    -v, --version    Display version information
+    -l, --license    Display license information\
 ", VERSION);
 		std::process::exit(0);
 	}
@@ -59,6 +60,27 @@ GulfOfMexico interpreter by Zakarya, version {}\
 ", VERSION);
 		std::process::exit(0);
 	}
+    else if args.get(0).map(|h_string| ["-l", "--license"].contains(&h_string.as_str())).unwrap_or(false) {
+        println!(
+"\
+GulfOfMexico interpreter version {}
+Copyright (C) 2025 Zakarya
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.\
+", VERSION);
+		std::process::exit(0);
+    }
 
 	match fs::read_to_string(&args[0]) {
 		Ok(contents) => {
